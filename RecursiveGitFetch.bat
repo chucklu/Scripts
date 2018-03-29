@@ -1,12 +1,9 @@
 @echo off
 echo Mission Started: %date% %time%
-echo Mission Started: %date% %time% >fetch.log
 setlocal EnableDelayedExpansion
 set repositoryCount=0
-Call :GitFetch %cd% >>fetch.log
-echo Mission Completed: %date% %time% >>fetch.log
+Call :GitFetch %cd%
 echo Mission Completed: %date% %time%
-echo hello >>fetch.log
 Exit /B 0
 
 :GitFetch
