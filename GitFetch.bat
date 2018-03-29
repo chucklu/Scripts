@@ -8,7 +8,9 @@ IF EXIST .git (
 set /a repositoryCount+=1
 echo !repositoryCount! %%i
 git remote -v 
+echo Fetch Started: %date% %time%
 git fetch --all
+echo Fetch Completed: %date% %time%
 echo.
 )
 cd ..
@@ -18,14 +20,9 @@ exit /b 0
 
 :CountSubFolders
 set count=0
-rem echo %~1  111
-rem echo %cd% 222
 cd %~1
-rem echo %cd% 333
 for /d %%i in (*) do (
-rem echo subfolder %%i
 set /a count+=1)
-rem echo %count% 444
 set "%~2=%count%"
 cd..
 exit /b %ErrorLevel%
