@@ -16,7 +16,7 @@ git fetch --all
 echo Fetch Completed: %date% %time%
 echo.
 )
-Call :CountSubFolders "%~1",value2
+Call :CountSubFolders "%*",value2
 if not !value2! == 0 (
 for /d %%i in ("%~1"\*) do (
 cd "%%~i"
