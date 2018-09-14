@@ -1,0 +1,1 @@
+$(TargetDir)en-US\Resources.bat $(SolutionDir) $(TargetDir) $(TargetName) $(TargetExt) en-US $(ProjectDir)
