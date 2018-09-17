@@ -4,7 +4,7 @@ $targetName = $args[2]
 $targetExt = $args[3]
 $languageCode = $args[4]
 
-$modulePath = "{0}powershell\Resources.psm1" -f $moduleDir
-Import-Module $modulePath
+$modulePath = "{0}\powershell\Resources.psm1" -f "$moduleDir"
+Import-Module "$modulePath"
 
-ConvertTo-ResourceDll $targetDir $targetName $targetExt $languageCode
+ConvertTo-ResourceDll "$targetDir" $targetName $targetExt $languageCode

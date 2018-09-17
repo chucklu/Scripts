@@ -25,17 +25,17 @@ $languageCode)
 $env:Path = $env:Path + ';C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bin\'
 $env:Path = $env:Path + ';C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools\x64\'
 
-$txt = "{0}{2}\{1}.txt" -f $targetDir,$targetName,$languageCode
+$txt = "{0}\{2}\{1}.txt" -f $targetDir,$targetName,$languageCode
 # write-host $txt
 
 ResGen $txt
 
-$embed = "{0}{2}\{1}.resources" -f $targetDir,$targetName,$languageCode
-$out = "{0}{2}\{1}.resources.dll" -f $targetDir,$targetName,$languageCode
+$embed = "{0}\{2}\{1}.resources" -f $targetDir,$targetName,$languageCode
+$out = "{0}\{2}\{1}.resources.dll" -f $targetDir,$targetName,$languageCode
 # write-host $embed
 # write-host $out
 
- $path = "{0}{1}{2}" -f $targetDir,$targetName,$targetExt
+ $path = "{0}\{1}{2}" -f $targetDir,$targetName,$targetExt
 # write-host $path
 $fileversion = (Get-Item $path).VersionInfo.FileVersion
 # write-host $fileversion

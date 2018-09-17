@@ -1,1 +1,1 @@
-$(TargetDir)en-US\Resources.bat $(SolutionDir) $(TargetDir) $(TargetName) $(TargetExt) en-US $(ProjectDir)
+"$(TargetDir)en-US\Resources.bat" "$(SolutionDir.TrimEnd('\'))" "$(TargetDir.TrimEnd('\'))" "$(TargetName)" "$(TargetExt)" en-US "$(ProjectDir.TrimEnd('\'))"
