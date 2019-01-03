@@ -29,3 +29,7 @@ for entry in os.scandir(path):
 		
 
 #download the weight file
+
+import urllib
+url="http://zero.sjeng.org/networks/25c2313d8c11b9320de4795cf593f237f32e8a61c4524a6305ff30073b760132.gz"
+urllib.request.urlretrieve(url,"25c231.gz")
