@@ -20,8 +20,8 @@ function Convert-EncodingToUTF8NoBOM {
   $files = Get-ChildItem -Path $targetDir -Filter $extension
   foreach ($file in $files)
   {
-    #$file.Name
-    $fileContent = Get-Content -Path $file.Name
-    [System.IO.File]::WriteAllLines($file.Name,$fileContent,$Utf8NoBomEncoding)
+    #$file.FullName
+    $fileContent = Get-Content -Path $file.FullName
+    [System.IO.File]::WriteAllLines($file.FullName,$fileContent,$Utf8NoBomEncoding)
   }
 }
