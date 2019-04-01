@@ -1,6 +1,6 @@
 $msBuild = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community-Preview\Common7\IDE\devenv.com"
 
-$location = Get-Location
+$location = $PSScriptRoot
 
 $folder = "{0}\Log" -f $location
 $logFolderExists = Test-Path -Path $folder
