@@ -23,6 +23,7 @@ $mode = $args[0]
 $solutions = "solution1.sln","solution2.sln","solution3.sln"
 # "& $msBuild $solutionName /nologo -verbosity:normal /Rebuild $mode"
 # -verbosity:normal is ot supported in vs 2019
-foreach ($solution in $solutions) {
-    & $msBuild $solution /nologo /Rebuild $mode 2>&1 >> $log
+foreach ($solutionName in $solutions) {
+    $solutionPath = Join-Path -Path $location -ChildPath $solutionName
+    & $msBuild $solutionPath /nologo /Rebuild $mode 2>&1 >> $log
 }

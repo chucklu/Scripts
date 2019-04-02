@@ -23,4 +23,5 @@ $solutionName = $args[0]
 $mode = $args[1]
 # "& $msBuild $solutionName /nologo -verbosity:normal /Rebuild $mode"
 # -verbosity:normal is ot supported in vs 2019
-& $msBuild $solutionName /nologo /Rebuild $mode >> $log 2>&1
+$solutionPath = Join-Path -Path $location -ChildPath $solutionName
+& $msBuild $solutionPath /nologo /Rebuild $mode >> $log 2>&1
