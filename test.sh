@@ -8,3 +8,8 @@ echo $yesterday
 
 test=$(date -d '2019-07-04 12:45:00' +%Y-%m-%d" "%H:%M:%S)
 echo $test
+
+git filter-branch -f --env-filter '
+echo 
+echo $GIT_COMMIT
+' 67d9d9..temp
