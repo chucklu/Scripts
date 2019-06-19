@@ -10,10 +10,15 @@ test=$(date -d '2019-07-04 12:45:00' +%Y-%m-%d" "%H:%M:%S)
 echo $test
 
 let index=0
-
+startDate=$(date -d '2019-07-04 12:45:00' +%Y-%m-%d" "%H:%M:%S)
+echo $startDate
+echo
 git filter-branch -f --env-filter '
 index=$((index + 1))
+echo
 echo $index
-echo 
+startDate=$(date -I -d "$startDate + 1 day")
+echo $startDate
 echo $GIT_COMMIT
+echo
 ' 67d9d9..temp
