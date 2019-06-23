@@ -17,6 +17,7 @@ git filter-branch -f --env-filter '
 index=$((index + 1))
 echo
 echo $index
+startDate=$(date -d ''2019-07-01'')
 NEXT_DATE=$(date +%Y-%m-%d" "%T -d "$startDate + $index day")
 echo $NEXT_DATE
 echo $GIT_COMMIT
