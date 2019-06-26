@@ -10,8 +10,6 @@ test=$(date -d '2019-07-04 12:45:00' +%Y-%m-%d" "%H:%M:%S)
 echo $test
 
 let index=0
-startDate=$(date -d '2019-07-01 12:45:00' +%Y-%m-%d" "%T)
-echo $startDate
 echo
 git filter-branch -f --env-filter '
 index=$((index + 1))
