@@ -1,0 +1,1 @@
+New-NetFirewallRule -DisplayName "Chuck Disable Google Chrome" -Direction Inbound -Program "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" -Action Block

@@ -1,0 +1,1 @@
+Disable-NetFirewallRule -DisplayName "Chuck Disable Google Chrome"
